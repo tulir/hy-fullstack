@@ -1,0 +1,20 @@
+käyttäjä->selain: käyttäjä painaa talleta-nappia
+
+selain->palvelin: POST /new_note
+palvelin->selain: HTTP 302 -> /notes
+
+selain->palvelin: GET /notes
+note right of selain
+    palvelin vastaa, että tiedostoa ei ole muokattu,
+    jolloin selain käyttää välimuistissa olevaa
+    versiota tiedostosta.
+end note
+palvelin->selain: HTTP 304
+selain->palvelin: GET /main.css
+palvelin->selain: HTTP 304
+selain->palvelin: GET /notes/main.js
+palvelin->selain: HTTP 304
+selain->palvelin: GET /data.json
+selain->käyttäjä: Sivu ilman muistiinpanoja
+palvelin->selain: HTTP 200, application/json
+selain->käyttäjä: Muistiinpanot ilmestyvät sivulle

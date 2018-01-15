@@ -1,0 +1,32 @@
+note over käyttäjä
+    käyttäjä kirjottaa osoiteriville
+    https://fullstack-exampleapp.herokuapp.com/notes
+end note
+käyttäjä->selain:
+
+selain->palvelin: GET /notes
+palvelin->selain: HTTP 200, text/html
+note over selain
+    selain lukee HTML-tiedostoa ja löytää
+    <link> ja <script> tagit, joiden kohteet
+    on haettava palvelimelta.
+end note
+selain->palvelin: GET /main.css
+palvelin->selain: HTTP 200, text/css
+selain->palvelin: GET /notes/main.js
+palvelin->selain: HTTP 200, application/javascript
+note over selain
+    selain ajaa JavaScript-tiedoston,
+    joka hakee /data.json-tiedoston
+end note
+selain->palvelin: GET /data.json
+
+selain->käyttäjä: nettisivu ilman muistiinpanoja
+
+palvelin->selain: HTTP 200, application/json
+
+note over selain
+    skripti lukee JSON-tiedoston, ja lisää siinä olevan tekstin
+    käyttäjän nähtäväksi nettisivulle.
+end note
+selain->käyttäjä: muistiinpanot ilmestyvät nettisivulle

@@ -1,0 +1,9 @@
+käyttäjä->selain: käyttäjä painaa talleta-nappia
+
+note over selain
+    selain ajaa form.onsubmit funktion
+end note
+selain->käyttäjä: uusi muistiinpano ilmestyy sivulle
+
+selain->palvelin: POST /new_note_spa
+palvelin->selain: HTTP 201, application/json
