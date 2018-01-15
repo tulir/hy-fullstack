@@ -1,1 +1,2 @@
-2017-01-15 // 22:15 - 22:45
+# Start date // start - end   // End date (same as start if omitted)
+> 2017-01-15 // 22:15 - 22:45
