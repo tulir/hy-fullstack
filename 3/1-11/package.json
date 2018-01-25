@@ -20,5 +20,6 @@
     "watch": "node_modules/.bin/nodemon index.js",
     "start-frontend": "react-scripts start",
     "build": "react-scripts build"
-  }
+  },
+  "proxy": "http://localhost:29391"
 }
