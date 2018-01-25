@@ -1,0 +1,29 @@
+{
+  "name": "hy-fullstack_3.12-22",
+  "version": "0.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.1",
+    "morgan": "^1.9.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-plugin-react": "^7.5.1",
+    "nodemon": "^1.14.11"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "watch": "node_modules/.bin/nodemon index.js",
+    "start-frontend": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "proxy": "http://localhost:29391"
+}

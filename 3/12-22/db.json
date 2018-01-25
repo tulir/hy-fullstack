@@ -1,0 +1,19 @@
+{
+  "people": [
+    {
+      "name": "Arto Järvinen",
+      "number": "040-123456",
+      "id": 3
+    },
+    {
+      "name": "Arto",
+      "number": "54321",
+      "id": 5
+    },
+    {
+      "name": "fll",
+      "number": "bar",
+      "id": 7
+    }
+  ]
+}
