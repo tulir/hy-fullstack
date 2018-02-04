@@ -1,0 +1,27 @@
+{
+  "name": "hy-fullstack_5.1-16",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-eslint": "^8.2.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-plugin-jest": "^21.7.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-plugin-react": "^7.5.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "CI=true react-scripts test --verbose --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:29392"
+}

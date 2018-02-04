@@ -69,4 +69,19 @@ router.put("/:id", async (request, response) => {
 	response.json(Blog.format(blog))
 })
 
+router.post("/:id/like", async (request, response) => {
+	if (!request.user) {
+		return response.status(401).json({ error: "token missing or invalid" }).end()
+	}
+	const blog = await Blog.findById(request.params.id).populate("user")
+	blog.user = User.format(blog.user)
+	delete blog.user.blogs
+	if (!blog) {
+		return response.status(404).end()
+	}
+	blog.likes++
+	await blog.save()
+	response.json(Blog.format(blog))
+})
+
 module.exports = router
